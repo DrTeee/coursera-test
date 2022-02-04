@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.wrapper .navbar {
+  background-color: #17bebb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+
+.wrapper .navbar .navheader {
+  display: block;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #fefee3;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper .navbar ul {
+  padding: 0;
+}
+
+.wrapper .navbar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #10558d;
+  list-style: none;
+  display: block;
+}
+
+.wrapper .navbar ul li a {
+  text-decoration: none;
+  color: azure;
+  display: block;
+  position: relative;
+}
+
+.wrapper .navbar .navheader:hover,
+.wrapper .navbar ul li a:hover,
+.wrapper .navbar ul li a:active {
+  background-color: cornsilk;
+  color: black;
+  border-right: 2px solid rgb(5, 68, 104);
+  border-left: 2px solid rgb(5, 68, 104);
+  padding: 5px;
+}
+
+.wrapper .main-doc {
+  width: calc(100% - 200px);
+  margin-left: 200px;
+  transition: all 0.5s ease;
+}
+
+main {
+  line-height: 1.5;
+  margin: 5px;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 2.5em;
+}
+
+#main-doc header {
+  font-size: 1.8em;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0px;
+  font-weight: bolder;
+}
+
+.sentence {
+  background-color: #17bebb;
+}
+
+.sentence.class {
+  font-weight: bold;
+}
+
+.sentence:hover {
+  background-color: black;
+  color: red;
+}
+
+pre {
+  margin: 0;
+  white-space: pre;
+}
+
+.token tag {
+  color: #a30008;
+}
+
+.code-example {
+  border-left: 6px solid #005282;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  max-width: 100%;
+  overflow: auto;
+  padding: 24px;
+  width: 100%;
+  background-color: #d4f4dd;
+  font-family: monospace;
+}
+
+.interpretation {
+  border-left: 6px solid #005282;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 24px;
+  max-width: 100%;
+  overflow: auto;
+  padding: 24px;
+  width: 100%;
+  background-color: #fefee3;
+  border-right: 1px solid #005282;
+  border-top: 1px solid #005282;
+  border-bottom: 1px solid #005282;
+}
+
+@media (max-width=1199px) {
+  width: 100%;
+}
+
+.attribute {
+  width: 100%;
+}
+
+.first:hover,
+#elements:hover,
+#tags:hover {
+  background: lavender;
+}

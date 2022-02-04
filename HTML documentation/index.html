@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="wrapper">
+    <div class="navbar">
+        <nav id="navbar">
+            <header class="navheader">HTML Documentation</header>
+            <ul>
+            <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+             <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+             <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+             <li><a class="nav-link" href="#Anatomy_of_an_HTML_document">Anatomy of an HTML document</a></li>
+             <li><a class="nav-link" href="#HTML_comments">HTML Comments</a></li>
+             <li><a class="nav-link" href="#Summary">Summary</a></li>
+             <li><a class="nav-link" href="#reference">Reference</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="main-doc">
+    <h1 id="html">HTML Documentation</h1>
+<main id="main-doc">
+   
+  <section class="main-section" id="What_is_HTML?">
+    <header>What is HTML?</header>
+    <p><a class="first" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</a> (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of <a id="elements" href="https://developer.mozilla.org/en-US/docs/Glossary/Element">elements</a>, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing <a id="tags" href="https://developer.mozilla.org/en-US/docs/Glossary/Tag"> tags</a> can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:</p>
+    <div class="code-example">My cat is very grumpy</div>
+    <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (<code class="sentence">&lt;p&gt;</code>) element:</p>
+    <div class="code-example"><code>&lt;p&gt;</code>My cat is very grumpy<code>&lt;/p&gt;</code></div>
+  </section>
+  
+  <br>
+  
+  <section class="main-section" id="Anatomy_of_an_HTML_element">
+    <header>Anatomy of an HTML element</header>
+    <p>Let's further explore our paragraph element from the previous section:</p>
+    <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"/>
+    <p>The anatomy of our element is:</p>
+    <ul>
+      <li>The opening tag: This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+      <li>The content: This is the content of the element. In this example, it is the paragraph text.</li>
+      <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+    </ul>
+    <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+    <h3>Block versus inline elements</h3>
+    <p>Block versus inline elements</p>
+    <ul>
+      <li>Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+      <li>Inline elements are contained within block-level elements, and surround only small parts of the document’s content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an <code class="sentence">&lt;a&gt;</code> element creates a hyperlink, and elements such as <code class="sentence">&lt;em&gt;</code> or <code class="sentence">&lt;strong&gt;</code> create emphasis</li>
+    </ul>
+    <p>Consider the following example:</p>
+    <div class="code-example">
+    <p><code>&lt;em&gt;</code>first<code>&lt;/em&gt;</code><code>&lt;em&gt;</code>second<code>&lt;/em&gt;</code><code>&lt;em&gt;</code>third<code>&lt;/em&gt;</code></p>
+
+<p><code>&lt;p&gt;</code>fourth<code>&lt;/p&gt;</code><code>&lt;p&gt;</code>fifth<code>&lt;/p&gt;</code><code>&lt;p&gt;</code>sixth<code>&lt;/p&gt;</code></p>
+      </div>
+    
+   <p><code class="sentence">&lt;em&gt;</code> is an inline element. As you see below, the first three elements sit on the same line, with no space in between. On the other hand, <code  class="sentence">&lt;p&gt;</code> is a block-level element. Each p element appears on a new line, with space above and below. (The spacing is due to default CSS styling that the browser applies to paragraphs.)</p>
+    
+    <div class="interpretation">
+      <em>first</em><em>second</em><em>third</em>
+<p>fourth</p><p>fifth</p><p>sixth</p>
+    </div>
+         
+  </section>
+  
+  <br>
+  
+  <section class="main-section" id="Attributes">
+    <header>Attributes</header>
+    <p>Elements can also have attributes. Attributes look like this:</p>
+    <img class="attribute" src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png"/>
+    <p>Attributes contain extra information about the element that won't appear in the content. In this example, the <code class="sentence class">class</code> attribute is an identifying name used to target the element with style information.</p>
+   <p>An attribute should have:</p>
+    <ul>
+      <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)</li>
+      <li>The attribute name, followed by an equal sign.</li>
+      <li>An attribute value, wrapped with opening and closing quote marks.</li> 
+    </ul>
+  </section>
+  
+  <br>
+  
+  <section class="main-section"  id="Anatomy_of_an_HTML_document">
+    <header>Anatomy of an HTML document</header>
+    <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:</p>
+    
+  <div class="code-example">
+    <pre class="brush">
+      <code>
+        <span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+          <span class="token tag">&lt;html&gt;</span>
+            <span class="token tag">&lt;head&gt;</span>
+              <span class="token tag">&lt;meta charset="utf-8"&gt;</span>
+              <span class="token tag">&lt;title&gt;</span><span>My test Page</span><span class="token tag">&lt;/title&gt;</span>
+            <span class="token tag">&lt;/head&gt;</span>
+            <span class="token tag">&lt;body&gt;</span>
+              <span class="token tag">&lt;p&gt;</span><span>>This is my page</span><span class="token tag">&lt;/p&gt;</span>
+            <span class="token tag">&lt;/body&gt;</span>
+          <span class="token tag">&lt;/html&gt;</span>
+      </code>
+    </pre>
+  </div>
+  </section>
+  
+  <br>
+  
+  <section class="main-section" id="HTML_comments">
+    <header>HTML comments</header>
+    <p>HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.</p>
+    <p>To write an HTML comment, wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code>. For example:</p>
+    <div class="code-example">
+      <p><code>&lt;p&gt;</code>I'm not inside a comment<code>&lt;/p&gt;</code></p>
+
+      <p><code>&lt;!--</code><code>&lt;p&gt;</code>I am!<code>&lt;/p&gt;</code>--&gt;</code></p>
+    </div>
+    <p>As you can see below, only the first paragraph displays in the live output.</p>
+    <div class="interpretation">I'm not inside a comment</div>
+  </section>
+  
+  <br>
+  
+  <section class="main-section" id="Summary">
+    <header>Summary</header>
+    <p>You made it to the end of the article! We hope you enjoyed your tour of the basics of HTML.</p>
+    <p>At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.</p>
+  </section>
+
+  <section class="main-section" id="reference">
+    <header>Reference</header>
+    <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></p>
+  </section>
+
+
+  
+</main>
+</div>
+</div>
+
+</body>
+</html>
